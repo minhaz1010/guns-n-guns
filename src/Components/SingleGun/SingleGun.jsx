@@ -3,6 +3,8 @@ import Modal from "../Modal/Modal";
 
 const SingleGun = (props) => {
   const { id, name, img, action, price, category } = props.guns;
+  // console.log(props);
+  // console.log(props.guns);
 
   return (
     <div className="gun-container ">
@@ -25,16 +27,15 @@ const SingleGun = (props) => {
             </button>
             <button
             className="btn text-black"
-            onClick={() => document.getElementById("my_modal_1").showModal()}
+            onClick={() => document.getElementById(`my_modal_${id}`).showModal()}
           >
             open modal
           </button>
           </div>
         </div>
         <div>
-         
         </div>
-        <Modal details={props.guns}></Modal>
+          <Modal details={props.guns}></Modal>
       </div>
     </div>
   );
