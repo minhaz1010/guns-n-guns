@@ -26,16 +26,17 @@ const SingleGun = (props) => {
               Add to cart
             </button>
             <button
-            className="btn text-black"
-            onClick={() => document.getElementById(`my_modal_${id}`).showModal()}
-          >
-            open modal
-          </button>
+              className="btn text-black"
+              onClick={() =>
+                document.getElementById(`my_modal_${id}`).showModal()
+              }
+            >
+              open modal
+            </button>
           </div>
         </div>
-        <div>
-        </div>
-          <Modal details={props.guns}></Modal>
+        <div></div>
+        <Modal details={props.guns}></Modal>
       </div>
     </div>
   );
